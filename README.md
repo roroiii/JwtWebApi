@@ -22,6 +22,9 @@
 
 ## 參考資料
 
-- [.NET 6 Web API 🔒 Create JSON Web Tokens (JWT) - User Registration / Login / Authentication](https://www.youtube.com/watch?v=v7q3pEK1EA0&t=0s)
+- [[Part 1/4] .NET 6 Web API 🔒 Create JSON Web Tokens (JWT) - User Registration / Login / Authentication](https://www.youtube.com/watch?v=v7q3pEK1EA0&t=0s)
+- [[Part 2/4] .NET 6 Web API 🔒 Role-Based Authorization with JSON Web Tokens (JWT): ](https://www.youtube.com/watch?v=TDY_DtTEkes&t=0s)
+- [[Part 3/4] .NET 6 Web API 🔒 Read JWT Authorization Claims of a User (from a JSON Web Token): ](https://www.youtube.com/watch?v=fhWIkbF18lM&t=0s)
+- [ [Part 4/4] Refresh Tokens with a .NET 6 Web API 🚀: ](https://www.youtube.com/watch?v=HGIdAn2h8BA&t=0s)
 - [JWT.IO](https://jwt.io/)
 - [Microsoft Docs: Authenticate with JWT in a web API](https://docs.microsoft.com/en-us/aspnet/core/security/authentication/accjwt?view=aspnetcore-6.0)
