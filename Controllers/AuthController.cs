@@ -10,6 +10,8 @@ using Microsoft.Extensions.Logging;
 using net_jwt.Dtos;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
+using Microsoft.AspNetCore.Authorization;
+using net_jwt.Services.UserService;
 
 namespace net_jwt.Controllers
 {
@@ -19,10 +21,25 @@ namespace net_jwt.Controllers
     {
         public static User user = new User();
         private readonly IConfiguration _configuration;
+        private readonly IUserService _userService;
 
-        public AuthController(IConfiguration configuration)
+        public AuthController(IConfiguration configuration, IUserService userService)
         {
             _configuration = configuration;
+            _userService = userService;
+        }
+
+        [HttpGet, Authorize]
+        public ActionResult<object> GetMe()
+        {
+
+            var userNameByUserService = _userService.GetMyName();  // This is the way to get the username from the UserService.(AddHttpContextAccessor)
+
+            // This is the way to get the username from the Controller. (Authorize is required)
+            var username = User?.Identity?.Name;
+            var username2 = User.FindFirstValue(ClaimTypes.Name);
+            var role = User.FindFirstValue(ClaimTypes.Role);
+            return Ok(new { userNameByUserService, username, username2, role });
         }
 
         [HttpPost("register")]
