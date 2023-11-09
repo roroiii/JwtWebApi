@@ -24,7 +24,7 @@ builder.Services.AddSwaggerGen(options =>
     });
 
     options.OperationFilter<SecurityRequirementsOperationFilter>();
-}); // 目前進度 https://youtu.be/TDY_DtTEkes?si=FDU5ct5y4Kqzogy4&t=1337
+}); // 影片 https://youtu.be/TDY_DtTEkes?si=FDU5ct5y4Kqzogy4&t=1337
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
 .AddJwtBearer(options =>
 {
