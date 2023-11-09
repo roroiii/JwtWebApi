@@ -1,0 +1,30 @@
+
+root = true
+
+[*]
+indent_style = space
+indent_size = 4
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+###############################
+# C# Coding Conventions       #
+###############################
+[*.cs]
+csharp_style_field_prefix = _ : warning
+csharp_style_field_prefix_first_character_lowercase = true : warning
+
+###############################
+# .NET Coding Conventions     #
+###############################
+dotnet_naming_rule.private_fields_should_have_prefix.severity = warning
+dotnet_naming_rule.private_fields_should_have_prefix.symbols  = private_fields
+dotnet_naming_rule.private_fields_should_have_prefix.style    = private_prefix_style
+
+dotnet_naming_symbols.private_fields.applicable_kinds   = field
+dotnet_naming_symbols.private_fields.required_modifiers = private
+
+dotnet_naming_style.private_prefix_style.required_prefix = _
+dotnet_naming_style.private_prefix_style.capitalization = camel_case
